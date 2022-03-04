@@ -145,6 +145,7 @@
     <ClInclude Include="serializer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="deserializer.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="movie.cpp" />
     <ClCompile Include="movieseries.cpp" />

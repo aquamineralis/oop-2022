@@ -9,7 +9,7 @@ bool Serializer::write_movie(const Movie& movie) {
     double score         = movie.get_score();
     unsigned length      = movie.get_length();
     const char* name     = movie.get_name();
-    unsigned name_length = (unsigned) strlen(name);
+    unsigned name_length = (unsigned) strlen(name) + 1;
 
     if (!write_buffer(&year, sizeof(year)))
         return false;

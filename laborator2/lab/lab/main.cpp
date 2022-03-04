@@ -51,22 +51,22 @@ bool do_write(const MovieSeries& series) {
     serializer.close();
     return true;
 }
-//
-// bool do_read(MovieSeries& series) {
-//    Deserializer deserializer;
-//    if (!deserializer.init(FILE_NAME)) {
-//        deserializer.close();
-//        return false;
-//    }
-//
-//    if (!deserializer.read(series)) {
-//        deserializer.close();
-//        return false;
-//    }
-//
-//    deserializer.close();
-//    return true;
-//}
+
+bool do_read(MovieSeries& series) {
+    Deserializer deserializer;
+    if (!deserializer.init(FILE_NAME)) {
+        deserializer.close();
+        return false;
+    }
+
+    if (!deserializer.read(series)) {
+        deserializer.close();
+        return false;
+    }
+
+    deserializer.close();
+    return true;
+}
 
 int main() {
     MovieSeries series = get_series();
@@ -76,12 +76,12 @@ int main() {
         return -1;
     }
 
-    // MovieSeries new_series;
-    // new_series.init();
-    // if (!do_read(new_series)) {
-    //     return -1;
-    // }
+    MovieSeries new_series;
+    new_series.init();
+    if (!do_read(new_series)) {
+        return -1;
+    }
 
-    // printf("\n---------------------------------------------------------------------------------\n\n");
-    // new_series.print();
+    printf("\n---------------------------------------------------------------------------------\n\n");
+    new_series.print();
 }
