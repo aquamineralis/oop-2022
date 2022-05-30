@@ -1,3 +1,9 @@
+#include "HashManager.h"
+#include "CountAsciiHash.h"
+#include "CountVowelsHash.h"
+#include "CountConsonantHash.h"
+#include "EasyHash.h"
+
 /*
 Write the followind classes in C++:
 - An abstract class Hash that has a method that calculates a hash from a string and returns the appropriate number type;
@@ -17,10 +23,10 @@ char will be mutiplied by 12;
 
 int main() {
     HashManager hashes;
-    hashes["count_vowels"]    = new CountVowelsHash();
+    hashes["count_vowels"] = new CountVowelsHash();
     hashes["count_consonant"] = new CountConsonantHash();
-    hashes["count_ascii"]     = new CountAsciiHash();
-    hashes["easy_ascii"]      = new EasyHash();
+    hashes["count_ascii"] = new CountAsciiHash();
+    hashes["easy_ascii"] = new EasyHash();
 
     hashes.print_hashes("Did you ever hear the tragedy of Darth Plagueis the Wise?");
 }

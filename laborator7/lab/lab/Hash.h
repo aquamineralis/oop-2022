@@ -1,2 +1,7 @@
 #pragma once
-class Hash {};
+class Hash
+{
+public:
+	virtual int CalcHash(const char* sir) = 0;
+};
+
